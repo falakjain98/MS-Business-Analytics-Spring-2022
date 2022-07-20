@@ -1,0 +1,69 @@
+Regex Practice Part II Completed.ipynb
+- .str.contains(r'regex') to run function over each row
+- str.extractall extracts whatever regex is mentioned (with or without capture group)
+- str.findall() returns all results for every document in a single row
+- re.search returns the very first match in a pattern
+- re.findall is not greedy and returns everything
+
+Using_Textacy_for_Text_Pre_Processing.ipynb
+- Textacy is used for all text preprocessing steps
+- consists of pre built regex replacement functions such as urls
+- Spacy docs are not just text but have other 
+attributes as well which makes extracting ngrams easy
+- in spacy, text has to be converted to a document object with special methods 
+- Textacy can allow us to extract named entities which tells us what the document is talking about (e.g. New York City)
+- Textacy stats allows scoring for texts
+e.g. reading score based on different algos
+e.g. 3rd grade level or college level
+
+Next week will be dimensionality reduction
+
+word2vec Part I.pdf:
+- the most important thing to have happend in NLP as it aids in ML and text processing
+- in count vectorizers, all words are equidistant to each other (see pdf)
+- in tf-idf, the problem of noise is not addressed
+- rule based algos are very subjective based on people's opinions
+- therefore, not great solutions over all
+- solution: distributional hypothesis - 'you shall know a word by the company it keeps'
+- continuous bag of words, uses context window to the left and right of target word
+- studies likelihood of words occuring next to each other
+- stopwords removal depends on use case and model performance
+- for continuous bag of words, windows can be different on either side
+- see pdf for calculation
+- Most NLP models are biased towards English
+- CBOW uses context words to predict the target words
+- Instead, using skipgram we can use target words to predict context words
+- done for each context word for each target word using the sliding window
+- skipgram gives better results than CBOW and is therefore more prepared
+- context words are weighted according to distance from target word
+- theta weights our parameters, theta is optimized
+- formula is for each target word, for each context word
+- 2 matrices: context word matrix and target word matrix and are initialized randomly like neural network
+- vectors after training, represent meanings of the word as context or target word
+- final values are prvided for pair of words, one being target, the other being context
+- see pdf and videio at 2:00:00 for matrix calculation, see onenote
+
+- probably rewatch guest lecture
+- save money and time for an organization to increase value
+- Guest Speaker - Gabriel Santiago
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

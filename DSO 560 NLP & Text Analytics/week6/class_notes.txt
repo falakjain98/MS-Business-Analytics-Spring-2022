@@ -1,0 +1,34 @@
+- Submit group details by 04/25
+- final exam will be open everything
+	- focus on Fall 2021 exams
+	- older material may not be relevant
+	- write by hand, scan and share 
+
+Advanced Regex.ipynb:
+- look aheads and look behinds
+- \n should also be included in regex matching if required
+- positive look behind group: positive because you want it to match, references that it is behind capture group
+- positive look ahead group: positive because you want it to match, references that it is ahead capture group
+- ?<= look behind
+- ?= look ahead
+- used to find something between something in the start and something in the end
+- Greedy vs Lazy Evaluation
+
+Glove, FastText and Sentence.pdf:
+- helps with spell check issues
+- used for word embeddings
+- 
+
+How NLP and other DS models can be used together
+- n * m matrix with n users and m movies, values are ratings
+- 
+
+WEEK 7:
+
+RNN and LSTMS for NLP.ipynb
+- advantages and disadvantages of RNNs
+- LSTMs counter drawbacks of RNN
+- tries to model how humans think
+- 
+
+

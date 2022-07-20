@@ -1,0 +1,49 @@
+Tips and Tricks.ipynb
+- Counter function to get word counts
+- using dictionary first has to be initiated with count = 0 for each word, or else error is returned
+- don't repeat code, use functions
+- use docstrings for functions, easier to understand
+- remove stopwords using gensim rather than nltk which requires tokenization
+- gensim removes stop words using remove_stopwords function
+- however, limited to gensim's stopwords
+- predefined stopwords can be modified, but it is frozen so lower level modifications required
+- similar word matches using difflib, since regex matching to find similar and incorrectly typed words is too tedious
+- difflib yields matches that usually look right to people using minimum edit distance, see onenote
+- ratcliff-obershelp algorithm requires baseline word to be inputted, to give closest matches, useful for count vectorization
+- used for spelling correction, see ipynb for example
+- e.g. used in case of different ways of saying mcdonalds
+- fuzzywuzzy library uses distance measure to describe the minimum number of operations to convert one string to another
+- e.g. dog -> door: 2 distance
+- fuzzywuzzy is not language aware. e.g. cat and feline has 0 similarity, knaught and taught are returned as similar
+- fuzzywuzzy matching used for spell checking, DNA Analysis, authorship/plagiarism detector
+- fuzzywuzzy has slow performance
+- in process.extractBests(), scorer argument if set to fuzz.ratio evaluates on number of edits/length of the word
+- e.g. fuzzywuzzy provides the following matches for 'knaught' : 'naughty','taught','caught','knight','knights'
+- fuzzy wuzzy will never run on large datasets, takes a lot of time, each word gets compared to 20,000 words from pre-defined corpus
+- set_ratio does not care about tag repetition
+- in countvectorizer, order of words does not matter, in SOA, punctuations and order of words matter
+
+Probability and Niave Bayes.pdf
+- see one note
+
+Naive Bayes.ipynb
+- shows python implementation of NB
+- dealin with nonexistent words using smoothing parameter
+- 
+
+NGram Word Models.pdf:
+- see one note
+
+Euclidian Distance and Cosine Similarity for Text Data.pdf
+- see pdf filw
+
+Linear Algebra, Distance and Similarity.ipynb:
+- Euclidean distance and cosine similarity implementation
+- see onenote
+
+Cosine Similarity, PMI and Colocation:
+- regularly occuring words are not useful
+- words that are most useful only occur in some documents but are vital to meaning
+- tf-idf vectorization, see onenote
+- 
+

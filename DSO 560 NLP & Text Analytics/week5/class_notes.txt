@@ -1,0 +1,52 @@
+Dimensionality Reduction.ipynb (from week 4):
+- it is done after vectorization
+
+PCA:
+- dimensionality reduction can be acheived using PCA, done to reduce the features but still retain meaning, curse of dimensionality, slow model
+- with too many dimensions, model starts chasing edge cases, leads to over fitting
+- see dogs pic in ipynb, more data required to fit more dimensions
+- some dimensions have a very high correlation, e.g. similar n grams
+- eigen values matrix has only diagonal elements, one value for each dimension
+- eigen values multiplied with eigen vector,
+- eigen values can be used to determine number of values you want to keep in your equation
+- if a particular feature has 0 variance, it does not offer any value to analysis
+- we sort eigen values largest to smallest and do the same for eigen vectors
+- then we determine what percentage of information we would like to keep
+- after PCA you cannot attach a particular column to a particular feature
+- therefore, after PCA, interpretability is lost
+- columns reduce but rows remain same, columns represent the dimensions that we would like
+- no correlation remains between the reduced dimensions
+- when plotting the scatter plots, if the points are all clumped together then the points can be clubbed together to further reduce dimensions
+- wider distribution along axes is considered a good thing
+
+Singular Value Decomposition:
+- results in 3 different matrices
+- see ipynb & week 5 video for explanation
+- m: documents
+- n: terms
+- r: reduced dimensions, each dimension can be a distinct topic if data is built that way, provides what percentage of documents are about that topic
+- s: strength matrix, provides what is the signal of each topic
+
+Topic Modelling.ipynb:
+- continuation from SVD, grouping together of documents according to topic
+- after SVD, you see top values for each column and see which theme do the reviews belong to
+- see ipynb for examples
+- top terms for each topic
+- top documents for each topic
+- no performance metrics since it is unsupervised learning, no ground truth present
+- number of dimensions outputted has to be optimized as a hyperparameter
+- 
+
+Vord2Vec Part 1.ipynb:
+- Introduction to Algorithmic Marketing
+- spacy does all text preprocessing by default
+- word embeddings have already been trained
+- can be used with tfidf to generate word embeddings
+- Retraining Word2Vec is very tedious and not doable
+- newer models can change embedding based on context
+- word2vec is static and does not depend on context, which is important
+
+HMMs for POS Tagging.pdf:
+- makes use of parts of speech and states for processing
+- see pdf for calculation
+-

@@ -1,0 +1,50 @@
+Basic Python Operations for Working with Text.ipynb
+- encoding schemes
+- all text is stored in bytes
+- corpus - collection of documnents (e.g. review)
+- tokens - word / most atomic entity in language (e.g. Ney York City)
+- strings - made up of multiple bytes
+- text to encoded to binary format
+- ASCII Code
+- byte is the smallest storable unit = 8 bits
+- encoding: see OneNote
+- utf8 is variable length encoding
+
+Text Preprocessing Techniques.ipynb
+- document term matrix
+- boolean search query is not enough
+- rows are documents, columns are terms, values are binary, see onenote for screenshot
+- one way to vectorize documents
+- more advanced methods available
+- tokenizing is always better than using whitespaces
+- tokens have to be separate entities not always separate words (e.g. New York)
+- earlier tokenizations were based off of rule based algorithms
+- stemming converts words into their root form, porterstemmer
+- lemmatization uses the context of a word as well, uses part of speech as input argument in lemmatization function,
+otherwise everything considered as noun
+- only true positives and true negatives should be returned in analysis
+- stemming improves recall but at the cost of precision, since everything is reduced to the same root form
+- lemmatization is less aggressive than stemming and is a lot slower as well
+- f1-score = combination of precision & recall, 2*P*R / (P + R)
+- some stopwords may not really be stopwords, frozen set, but can add additional stopwords by unfreezing
+- countvectorizer
+	- speeds up preprocessing, can remove stopwords and convert to vectors
+	- .fit_transform creates word count, .to_array creates compressed sparse row
+	- rows are documents
+	- columns are tokens
+	- values are token counts for a given token and document
+
+Cosine Similarity, PMI and Colocation.ipynb
+- countvectorizer arguments for fit-transform:
+	- binary = True provides one-hot encoding (either 1 or 0), in case words may appear repetitively
+	- min_df = minimum percent of documents token should appear in if decimal
+	- min_df = minimum number of documents token should appear in if whole number
+	- when count vectorizer not enough, only then move to more advanced methods
+	- max_features = top n most frequent tokens so that data is highly relevant
+	- 
+
+
+
+
+
+

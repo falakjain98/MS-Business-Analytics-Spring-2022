@@ -1,0 +1,17 @@
+Basic Python Expressions for Working with Text.ipynb
+- Scale of data
+- Each unit of data is 1000 times the previous unit
+- Use open method to open text files
+- file.readline() reads one line at a time (up till new line character)
+- pd.read_csv() reads entire file, which can lead to memory error, therefore .readline() preferred
+- file.seek(0) seeks back to the first line of the document
+- word count can be done using dictionary at a basic level
+- splitting on whitespace returns double white spaces in care there are any
+- splitting on whitespaces in an empty string returns an empty string
+- use assert for sanity checks, can prevent need of debugging
+- using Counter is a much easier way to count words, has useful methods in built as well
+- use double tab for available methods to a function
+- in most docs, word distribution is highly highly right skewed, with most words occuring a handful of times only
+- ith most common word appears 0.1/i^alpha times with alpha = 1
+- too frequent and too rare words do not add value to ML model
+- regular expressions: regexr.com, see OneNote notes
